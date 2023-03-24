@@ -13,8 +13,14 @@ class CardSdk:
             response_json = json.loads(response.text)
             data = response_json["data"]
             card = data[0]
+            for potential_card in data:
+                if potential_card["name"] == cardname:
+                    card = potential_card
+                    break
+
             result += card["image_uris"]["normal"] + "\n"
-            result += "\n_" + card["flavor_text"] + "_\n\n"
+            if "flavor_text" in card:
+                result += "\n_" + card["flavor_text"] + "_\n\n"
             legalities = card["legalities"]
             for format in legalities:
                 if format in ['commander', 'modern', 'standard']:
