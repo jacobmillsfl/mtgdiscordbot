@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Don't check in the venv
+mtgbot/
+
+# Don't check in the env
+.mtgbot.env
