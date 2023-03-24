@@ -14,7 +14,7 @@ class CardSdk:
             data = response_json["data"]
             card = data[0]
             for potential_card in data:
-                if potential_card["name"] == cardname:
+                if potential_card["name"].lower() == cardname.lower():
                     card = potential_card
                     break
 
