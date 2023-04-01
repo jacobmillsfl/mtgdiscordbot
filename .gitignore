@@ -133,3 +133,6 @@ mtgbot/
 
 # Don't check in the env
 .mtgbot.env
+
+# Don't add local dev stuff
+.vscode/

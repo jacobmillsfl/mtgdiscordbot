@@ -1,7 +1,7 @@
 from dotenv import dotenv_values
 import discord
 from discord import Intents
-from utils import magic_assist as assistant
+from utils.misc import card_match
 from utils.card_sdk import CardSdk
 
 if __name__ == "__main__":
@@ -24,7 +24,7 @@ if __name__ == "__main__":
             return
         
         msg_content = message.content
-        matches = assistant.card_match(msg_content)
+        matches = card_match(msg_content)
         for cardname in matches:
             msg = await message.channel.send(f"_Searching for {cardname}..._")
             response = CardSdk.search(cardname)
