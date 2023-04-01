@@ -13,6 +13,7 @@ class CardSdk:
             parts = query.split("|")
             card_name = parts[0].strip()
             set = parts[1].strip()
+        print(card_name, set)
         return card_name, set
 
     @staticmethod
@@ -22,10 +23,9 @@ class CardSdk:
         card_name, set = CardSdk.parse_search_terms(search_terms)
         search_query = f"?q={card_name}"
         if set:
-            search_query += f"|{set}"
+            search_query += f"+set:{set}"
 
-        print(f"{CardSdk.API_QUERY_URL}?q={card_name}")
-        response = requests.get(f"{CardSdk.API_QUERY_URL}?q={card_name}")
+        response = requests.get(f"{CardSdk.API_QUERY_URL}{search_query}")
         if response.ok:
             response_json = json.loads(response.text)
             data = response_json["data"]

@@ -38,14 +38,15 @@ def repl():
 
 
 def test_search():
-    print(CardSdk.search("Graveyard Trespasser"))
-    print(CardSdk.search("Shock"))
-    print(CardSdk.search("Shock|m21"))
-    print(CardSdk.search(" Shock | m21 "))
-    print(CardSdk.search("Sol Ring"))
-    print(CardSdk.search("Erayo, Soratami Ascendant"))
-    print(CardSdk.search("Arlinn Kord"))
-    print(CardSdk.search("asdfj hadskf haf kfe"))
+    # print(CardSdk.search("Graveyard Trespasser"))
+    # print(CardSdk.search("Shock"))
+    # print(CardSdk.search("Shock|m21"))
+    # print(CardSdk.search(" Shock | m21 "))
+    # print(CardSdk.search("Sol Ring"))
+    # print(CardSdk.search("Erayo, Soratami Ascendant"))
+    # print(CardSdk.search("Arlinn Kord"))
+    # print(CardSdk.search("asdfj hadskf haf kfe"))
+    print(CardSdk.search("Tidal Surge|p02"))
 
 if __name__ == "__main__":
     #repl()
