@@ -99,7 +99,7 @@ class Card:
 
         if "card_faces" in card_object:
             front = card_object["card_faces"][0]
-            front_name = Card.parse("prices", front)
+            front_name = Card.parse("name", front)
             if front_name:
                 self.names.append(front_name)
             self.mana_cost = Card.parse("mana_cost", front)
