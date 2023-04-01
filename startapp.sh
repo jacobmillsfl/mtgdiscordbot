@@ -1,5 +1,5 @@
 #!/bin/bash
-if ps -ef | grep -v grep | grep mtgapp.py ; then
+if ps -ef | grep -v grep | grep mtgbot ; then
         exit 0
 else
 	cd /home/jacob/Discord/mtgdiscordbot/
